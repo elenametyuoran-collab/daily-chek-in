@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import CheckInCard from '@/components/CheckInCard';
 import StatsCard from '@/components/StatsCard';
 import Leaderboard from '@/components/Leaderboard';
+import PoweredBy from '@/components/PoweredBy';
 
 export default function HomePage() {
   const [refreshKey, setRefreshKey] = useState(0);
@@ -66,18 +67,18 @@ export default function HomePage() {
         </div>
 
         {/* Footer */}
-        <footer className="text-center mt-14 pb-6 text-sm text-gray-400">
-          <p>
-            Built on{' '}
+        <footer className="text-center mt-14 pb-6 space-y-3">
+          <PoweredBy />
+          <p className="text-xs text-gray-400">
+            Contract:{' '}
             <a
-              href="https://stacks.co"
+              href={`https://explorer.hiro.so/address/SP2ZR834WEZJ04EXNT2HMDG3S1WC7AGTB5ZNE5B2C.daily-checkin-v2?chain=mainnet`}
               target="_blank"
               rel="noopener noreferrer"
-              className="gradient-text font-medium hover:opacity-80 transition-opacity"
+              className="font-mono hover:text-indigo-500 transition-colors"
             >
-              Stacks
-            </a>{' '}
-            · Secured by Bitcoin
+              SP2ZR8…daily-checkin-v2
+            </a>
           </p>
         </footer>
       </main>

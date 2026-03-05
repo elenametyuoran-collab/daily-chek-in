@@ -43,9 +43,16 @@ export default function Leaderboard({ refreshKey }: Props) {
           <h2 className="text-xl font-bold gradient-text">Leaderboard</h2>
           <p className="text-sm text-gray-400 mt-0.5">{totalUsers} total participants</p>
         </div>
-        <div className="glass-dark rounded-2xl px-4 py-2">
-          <span className="text-sm font-semibold text-gray-600">Top 20</span>
-        </div>
+        <button
+          onClick={load}
+          disabled={loading}
+          className="glass-dark rounded-2xl px-4 py-2 hover:bg-white/60 transition-colors disabled:opacity-50"
+          title="Refresh leaderboard"
+        >
+          <span className={`text-sm font-semibold text-gray-600 ${loading ? 'animate-pulse' : ''}`}>
+            {loading ? '…' : '↻ Refresh'}
+          </span>
+        </button>
       </div>
 
       {/* Reward banner */}

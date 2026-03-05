@@ -41,7 +41,7 @@ export default function Leaderboard({ refreshKey }: Props) {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-xl font-bold gradient-text">Leaderboard</h2>
-          <p className="text-sm text-gray-400 mt-0.5">{totalUsers} total participants</p>
+          <p className="text-sm text-gray-400 mt-0.5">{totalUsers.toLocaleString()} total participants</p>
         </div>
         <button
           onClick={load}

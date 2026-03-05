@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { openContractCall } from '@stacks/connect';
+import { StacksMainnet } from '@stacks/network';
 import { useWallet } from '@/context/WalletContext';
 import { checkinClient } from '@/lib/contracts';
 import { canCheckIn, blocksToRelativeTime } from '@/lib/stacks';
 import type { UserStats } from '@/lib/contracts';
+
+const network = new StacksMainnet();
 
 interface Props {
   onCheckedIn?: () => void;
@@ -60,7 +63,7 @@ export default function CheckInCard({ onCheckedIn }: Props) {
     try {
       await openContractCall({
         ...txOptions,
-        network: 'mainnet' as any,
+        network,
         onFinish: () => {
           setJustCheckedIn(true);
           setTxPending(false);
@@ -79,7 +82,7 @@ export default function CheckInCard({ onCheckedIn }: Props) {
       : checkinClient.prepareClaimStreak30Nft();
     await openContractCall({
       ...txOptions,
-      network: 'mainnet' as any,
+      network,
       onFinish: () => onCheckedIn?.(),
     });
   }

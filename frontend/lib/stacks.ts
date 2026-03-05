@@ -72,3 +72,11 @@ export function isNftEligible(streak: number, claimed: boolean, threshold: numbe
 export function formatSTX(microStx: number): string {
   return (microStx / 1_000_000).toFixed(2) + ' STX';
 }
+
+
+// Approximate: Stacks genesis at block 0 around Oct 2018
+export function blockToApproxDate(block: number): string {
+  if (block === 0) return 'Never';
+  const approxMs = Date.now() - (block * 10 * 60 * 1000);
+  return new Date(approxMs).toLocaleDateString();
+}

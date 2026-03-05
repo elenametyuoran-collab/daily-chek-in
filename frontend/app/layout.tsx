@@ -3,6 +3,9 @@ import './globals.css';
 import { WalletProvider } from '@/context/WalletContext';
 
 export const metadata: Metadata = {
+  other: {
+    'talentapp:project_verification': '3406dcd8f9a797220a4c69e657ac56da51803f734f8b5be7e4fc1e453d6a612a180797bbc8ea1dc4021f6a4cc712d806d472878e227dca252d7b2317182b6ae5',
+  },
   title: 'Daily Check-in | Stacks Blockchain',
   description:
     'Check in every day, build your streak, earn NFT badges and STX rewards on the Stacks blockchain.',

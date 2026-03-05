@@ -173,3 +173,8 @@ html { scroll-behavior: smooth; }
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.35);
 }
+
+/* ─── Glow text ─── */
+.text-glow {
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}

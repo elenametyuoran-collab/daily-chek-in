@@ -62,3 +62,8 @@ export function getRankLabel(rank: number): string {
   if (rank === 3) return '3rd 🥉';
   return `${rank}th`;
 }
+
+
+export function isNftEligible(streak: number, claimed: boolean, threshold: number): boolean {
+  return streak >= threshold && !claimed;
+}

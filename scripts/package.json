@@ -1,0 +1,9 @@
+{
+  "name": "daily-checkin-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@stacks/network": "^6.13.0",
+    "@stacks/transactions": "^6.13.0"
+  }
+}

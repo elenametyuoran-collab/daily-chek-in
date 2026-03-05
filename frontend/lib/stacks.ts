@@ -47,3 +47,36 @@ export function streakMilestone(streak: number): string {
   if (streak >= 3)  return 'Getting Started 💧';
   return 'New 🌱';
 }
+
+
+export function formatNumber(n: number): string {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
+  if (n >= 1_000) return (n / 1_000).toFixed(1) + 'K';
+  return n.toString();
+}
+
+
+export function getRankLabel(rank: number): string {
+  if (rank === 1) return '1st 🥇';
+  if (rank === 2) return '2nd 🥈';
+  if (rank === 3) return '3rd 🥉';
+  return `${rank}th`;
+}
+
+
+export function isNftEligible(streak: number, claimed: boolean, threshold: number): boolean {
+  return streak >= threshold && !claimed;
+}
+
+
+export function formatSTX(microStx: number): string {
+  return (microStx / 1_000_000).toFixed(2) + ' STX';
+}
+
+
+// Approximate: Stacks genesis at block 0 around Oct 2018
+export function blockToApproxDate(block: number): string {
+  if (block === 0) return 'Never';
+  const approxMs = Date.now() - (block * 10 * 60 * 1000);
+  return new Date(approxMs).toLocaleDateString();
+}

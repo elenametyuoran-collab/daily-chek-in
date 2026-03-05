@@ -146,3 +146,49 @@ body {
   background: rgba(139, 92, 246, 0.3);
   border-radius: 3px;
 }
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(139, 92, 246, 0.6);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(167, 139, 250, 0.25);
+  color: #3730a3;
+}
+
+/* ─── Smooth scroll ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
+
+/* ─── Glass sm ─── */
+.glass-sm {
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* ─── Glow text ─── */
+.text-glow {
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+/* ─── Ripple ─── */
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 0.4; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+.ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  animation: ripple 0.5s ease-out;
+  background: rgba(255,255,255,0.3);
+}

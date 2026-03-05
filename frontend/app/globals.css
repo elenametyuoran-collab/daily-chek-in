@@ -159,3 +159,9 @@ body {
   background: rgba(167, 139, 250, 0.25);
   color: #3730a3;
 }
+
+/* ─── Smooth scroll ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}

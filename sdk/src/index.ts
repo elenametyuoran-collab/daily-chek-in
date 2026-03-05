@@ -104,14 +104,19 @@ export class DailyCheckinClient {
       senderAddress: this.contractAddress,
     });
 
+    // Response shape: (ok (some (tuple ...))) or (ok none)
+    // cvToJSON: { value: { type:"some"|"none", value: { type:"tuple", value: {fields} } } }
     const json = cvToJSON(result);
-    const inner = json.value?.value;
-    if (!inner || json.value?.type === 'none') return null;
+    const optionalCV = json.value;                     // SomeCV or NoneCV
+    if (!optionalCV || optionalCV.type === 'none') return null;
+
+    const tupleFields = optionalCV.value?.value;       // the actual tuple fields
+    if (!tupleFields) return null;
 
     return {
-      user: inner['user']?.value ?? '',
-      streak: parseInt(inner['streak']?.value ?? '0'),
-      totalCheckins: parseInt(inner['total-checkins']?.value ?? '0'),
+      user: tupleFields['user']?.value ?? '',
+      streak: parseInt(tupleFields['streak']?.value ?? '0'),
+      totalCheckins: parseInt(tupleFields['total-checkins']?.value ?? '0'),
     };
   }
 

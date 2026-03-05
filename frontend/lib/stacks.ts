@@ -29,3 +29,21 @@ export function shortenAddress(address: string): string {
   if (!address || address.length < 10) return address;
   return `${address.slice(0, 6)}…${address.slice(-4)}`;
 }
+
+export async function fetchCurrentBlock(): Promise<number> {
+  try {
+    const res = await fetch('https://api.mainnet.hiro.so/v2/info');
+    const data = await res.json();
+    return data.stacks_tip_height ?? 0;
+  } catch {
+    return 0;
+  }
+}
+
+export function streakMilestone(streak: number): string {
+  if (streak >= 30) return 'Legend 👑';
+  if (streak >= 14) return 'Unstoppable ⚡';
+  if (streak >= 7)  return 'On Fire 🔥';
+  if (streak >= 3)  return 'Getting Started 💧';
+  return 'New 🌱';
+}

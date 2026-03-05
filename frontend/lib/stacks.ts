@@ -1,7 +1,7 @@
 import { StacksMainnet } from '@stacks/network';
 
 export const CONTRACT_ADDRESS =
-  process.env.NEXT_PUBLIC_CONTRACT_ADDRESS ?? 'SP_CONTRACT_ADDRESS_HERE';
+  process.env.NEXT_PUBLIC_CONTRACT_ADDRESS ?? 'SP2ZR834WEZJ04EXNT2HMDG3S1WC7AGTB5ZNE5B2C';
 export const CONTRACT_NAME =
   process.env.NEXT_PUBLIC_CONTRACT_NAME ?? 'daily-checkin-v2';
 

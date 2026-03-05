@@ -1,0 +1,34 @@
+{
+  "name": "daily-checkin-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for the Daily Check-in dApp on Stacks blockchain",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "stacks",
+    "blockchain",
+    "clarity",
+    "web3",
+    "daily-checkin",
+    "sdk"
+  ],
+  "author": "elenametyuoran1",
+  "license": "MIT",
+  "dependencies": {
+    "@stacks/network": "^6.13.0",
+    "@stacks/transactions": "^6.13.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

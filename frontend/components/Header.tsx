@@ -17,7 +17,7 @@ export default function Header() {
             </div>
             <div>
               <h1 className="text-lg font-bold gradient-text leading-tight">Daily Check-in</h1>
-              <p className="text-xs text-gray-400 font-medium">Stacks Blockchain</p>
+              <p className="text-xs text-gray-400 font-medium">on Stacks · Secured by Bitcoin</p>
             </div>
           </div>
 

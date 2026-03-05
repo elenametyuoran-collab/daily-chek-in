@@ -35,19 +35,19 @@ export default function StatsCard({ refreshKey }: Props) {
   const stats = [
     {
       label: 'Participants',
-      value: loading ? '—' : totalUsers.toString(),
+      value: loading ? '—' : totalUsers.toLocaleString(),
       icon: '👥',
       color: 'from-blue-400 to-indigo-500',
     },
     {
       label: '7-Day Badges',
-      value: loading ? '—' : (nftCounts?.streak7Total ?? 0).toString(),
+      value: loading ? '—' : (nftCounts?.streak7Total ?? 0).toLocaleString(),
       icon: '🏅',
       color: 'from-purple-400 to-violet-500',
     },
     {
       label: '30-Day Badges',
-      value: loading ? '—' : (nftCounts?.streak30Total ?? 0).toString(),
+      value: loading ? '—' : (nftCounts?.streak30Total ?? 0).toLocaleString(),
       icon: '🏆',
       color: 'from-yellow-400 to-amber-500',
     },

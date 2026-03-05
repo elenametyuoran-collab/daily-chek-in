@@ -84,7 +84,7 @@
   (let
     (
       (caller tx-sender)
-      (current-block block-height)
+      (current-block stacks-block-height)
       (stats
         (default-to
           {

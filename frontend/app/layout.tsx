@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Daily Check-in | Stacks Blockchain',
   description:
     'Check in every day, build your streak, earn NFT badges and STX rewards on the Stacks blockchain.',
+  keywords: ['Stacks', 'blockchain', 'daily check-in', 'streak', 'NFT', 'STX rewards', 'Web3', 'Bitcoin', 'Clarity', 'dApp'],
   openGraph: {
     title: 'Daily Check-in | Stacks Blockchain',
     description: 'Build your streak, earn NFT badges and STX rewards.',

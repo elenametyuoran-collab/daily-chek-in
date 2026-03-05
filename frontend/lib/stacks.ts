@@ -67,3 +67,8 @@ export function getRankLabel(rank: number): string {
 export function isNftEligible(streak: number, claimed: boolean, threshold: number): boolean {
   return streak >= threshold && !claimed;
 }
+
+
+export function formatSTX(microStx: number): string {
+  return (microStx / 1_000_000).toFixed(2) + ' STX';
+}

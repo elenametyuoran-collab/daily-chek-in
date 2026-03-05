@@ -23,6 +23,9 @@ export default function CheckInCard({ onCheckedIn }: Props) {
   const [justCheckedIn, setJustCheckedIn] = useState(false);
 
   useEffect(() => {
+    setStats(null);
+    setCurrentBlock(0);
+    setJustCheckedIn(false);
     if (!userAddress) return;
     const load = async () => {
       setLoading(true);
@@ -52,9 +55,10 @@ export default function CheckInCard({ onCheckedIn }: Props) {
     }
   }
 
-  const eligible = stats && currentBlock > 0
+  // While loading stats — treat as not eligible to prevent duplicate submits
+  const eligible = !loading && stats !== null && currentBlock > 0
     ? canCheckIn(stats.lastCheckinBlock, currentBlock)
-    : true;
+    : false;
 
   async function handleCheckIn() {
     if (!isConnected) return connect();

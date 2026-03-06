@@ -48,3 +48,19 @@ cd frontend
 npm install
 npm run dev
 ```
+
+
+## FAQ
+
+**Q: How often can I check in?**
+Once per day (~144 Stacks blocks).
+
+**Q: What happens if I miss a day?**
+You have a 2-day grace period. Missing 2+ days resets your streak to 1.
+
+**Q: Are NFTs transferable?**
+Yes — they are standard Stacks NFTs (SIP-009).
+
+**Q: How are STX rewards distributed?**
+The contract owner periodically calls `distribute-rewards` with the top 5 addresses.
+

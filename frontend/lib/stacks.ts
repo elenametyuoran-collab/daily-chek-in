@@ -85,3 +85,8 @@ export function blockToApproxDate(block: number): string {
 export function isValidStacksAddress(addr: string): boolean {
   return /^S[MP][A-Z0-9]{38,39}$/.test(addr);
 }
+
+
+export function truncateText(text: string, maxLen: number): string {
+  return text.length <= maxLen ? text : text.slice(0, maxLen - 1) + '…';
+}

@@ -140,6 +140,10 @@ export class DailyCheckinClient {
   /**
    * Get NFT minting statistics.
    */
+  /**
+   * Get total counts of minted NFT badges.
+   * @returns {Promise<NftCounts>} { streak7Total, streak30Total }
+   */
   async getNftCounts(): Promise<NftCounts> {
     const result = await callReadOnlyFunction({
       contractAddress: this.contractAddress,

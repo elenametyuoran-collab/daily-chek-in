@@ -90,3 +90,6 @@ export function isValidStacksAddress(addr: string): boolean {
 export function truncateText(text: string, maxLen: number): string {
   return text.length <= maxLen ? text : text.slice(0, maxLen - 1) + '…';
 }
+
+
+export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));

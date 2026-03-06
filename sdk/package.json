@@ -1,6 +1,6 @@
 {
   "name": "daily-checkin-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript SDK for the Daily Check-in dApp on Stacks blockchain",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

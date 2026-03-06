@@ -216,8 +216,3 @@ export class DailyCheckinClient {
 }
 
 export default DailyCheckinClient;
-
-
-export type UserStats = Awaited<ReturnType<DailyCheckinClient['getUserStats']>>;
-export type LeaderboardEntry = Awaited<ReturnType<DailyCheckinClient['getLeaderboardEntry']>>;
-

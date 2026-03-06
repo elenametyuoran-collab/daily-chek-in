@@ -80,3 +80,8 @@ export function blockToApproxDate(block: number): string {
   const approxMs = Date.now() - (block * 10 * 60 * 1000);
   return new Date(approxMs).toLocaleDateString();
 }
+
+
+export function isValidStacksAddress(addr: string): boolean {
+  return /^S[MP][A-Z0-9]{38,39}$/.test(addr);
+}

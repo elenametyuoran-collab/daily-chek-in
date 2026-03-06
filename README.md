@@ -1,3 +1,5 @@
+![npm](https://img.shields.io/npm/v/daily-checkin-sdk?color=blueviolet) ![license](https://img.shields.io/badge/license-MIT-blue)
+
 # Daily Check-in dApp
 
 A Web3 daily check-in application built on the Stacks blockchain.

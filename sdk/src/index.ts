@@ -140,6 +140,10 @@ export class DailyCheckinClient {
   /**
    * Get NFT minting statistics.
    */
+  /**
+   * Get total counts of minted NFT badges.
+   * @returns {Promise<NftCounts>} { streak7Total, streak30Total }
+   */
   async getNftCounts(): Promise<NftCounts> {
     const result = await callReadOnlyFunction({
       contractAddress: this.contractAddress,
@@ -212,3 +216,8 @@ export class DailyCheckinClient {
 }
 
 export default DailyCheckinClient;
+
+
+export type UserStats = Awaited<ReturnType<DailyCheckinClient['getUserStats']>>;
+export type LeaderboardEntry = Awaited<ReturnType<DailyCheckinClient['getLeaderboardEntry']>>;
+

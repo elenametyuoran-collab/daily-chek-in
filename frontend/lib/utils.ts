@@ -8,3 +8,7 @@ export function memoize<T>(fn: (key: string) => T): (key: string) => T {
   const cache = new Map<string, T>();
   return (key: string) => { if (!cache.has(key)) cache.set(key, fn(key)); return cache.get(key)!; };
 }
+
+export function objectPick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
+  return keys.reduce((acc, k) => { if (k in obj) acc[k] = obj[k]; return acc; }, {} as Pick<T, K>);
+}

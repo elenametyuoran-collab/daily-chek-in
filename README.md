@@ -64,3 +64,14 @@ Yes — they are standard Stacks NFTs (SIP-009).
 **Q: How are STX rewards distributed?**
 The contract owner periodically calls `distribute-rewards` with the top 5 addresses.
 <!-- tech-note: Frontend deployed on Vercel with automatic CI/CD from GitHub. -->
+
+## Contract Details
+
+| Property | Value |
+|---|---|
+| Network | Stacks Mainnet |
+| Address | `SP2ZR834WEZJ04EXNT2HMDG3S1WC7AGTB5ZNE5B2C` |
+| Name | `daily-checkin-v2` |
+| Clarity | v3 |
+| Explorer | [View on Hiro](https://explorer.hiro.so/address/SP2ZR834WEZJ04EXNT2HMDG3S1WC7AGTB5ZNE5B2C.daily-checkin-v2?chain=mainnet) |
+

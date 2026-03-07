@@ -185,6 +185,7 @@ export class DailyCheckinClient {
   // ──────────────────────────────────────────
 
   /** Prepare args for check-in transaction. */
+  /** Prepare contract call options for the check-in transaction. Pass the result to openContractCall. */
   prepareCheckIn(): CheckInTxOptions {
     return {
       contractAddress: this.contractAddress,

@@ -217,3 +217,6 @@ export class DailyCheckinClient {
 }
 
 export default DailyCheckinClient;
+
+// re-export for convenience
+export type { NetworkType };

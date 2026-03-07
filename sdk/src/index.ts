@@ -166,6 +166,7 @@ export class DailyCheckinClient {
   /**
    * Fetch and sort full leaderboard (sorted by total-checkins descending).
    */
+  /** Fetch top N users by streak from the leaderboard map. */
   async getLeaderboard(maxEntries = 50): Promise<LeaderboardEntry[]> {
     const total = await this.getTotalUsers();
     const count = Math.min(total, maxEntries);
@@ -185,6 +186,7 @@ export class DailyCheckinClient {
   // ──────────────────────────────────────────
 
   /** Prepare args for check-in transaction. */
+  /** Prepare contract call options for the check-in transaction. Pass the result to openContractCall. */
   prepareCheckIn(): CheckInTxOptions {
     return {
       contractAddress: this.contractAddress,
@@ -216,3 +218,6 @@ export class DailyCheckinClient {
 }
 
 export default DailyCheckinClient;
+
+// re-export for convenience
+export type { NetworkType };

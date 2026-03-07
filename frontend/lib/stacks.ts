@@ -94,3 +94,8 @@ export function truncateText(text: string, maxLen: number): string {
 
 
 export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+
+export function clamp(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), max);
+}

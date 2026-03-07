@@ -63,4 +63,4 @@ Yes — they are standard Stacks NFTs (SIP-009).
 
 **Q: How are STX rewards distributed?**
 The contract owner periodically calls `distribute-rewards` with the top 5 addresses.
-
+<!-- tech-note: Frontend deployed on Vercel with automatic CI/CD from GitHub. -->

@@ -105,3 +105,12 @@ NEXT_PUBLIC_NETWORK=mainnet
 - All transactions are signed client-side — private keys never leave your wallet
 - No backend server — fully decentralized
 
+
+
+## Roadmap
+
+- [ ] Push notifications for daily reminder
+- [ ] Social sharing of streak milestones
+- [ ] Multi-chain support
+- [ ] DAO governance for reward pool
+

@@ -1,4 +1,5 @@
-// updated: 2026-03-07
+// updated: 2026-03-08
+
 import { StacksMainnet } from '@stacks/network';
 
 export const CONTRACT_ADDRESS =
@@ -98,4 +99,24 @@ export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, 
 
 export function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);
+}
+
+
+export function randomBetween(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+export function unique<T>(arr: T[]): T[] {
+  return [...new Set(arr)];
+}
+
+
+export function cn(...classes: (string | undefined | null | false)[]): string {
+  return classes.filter(Boolean).join(' ');
+}
+
+
+export function formatDate(date: Date | string): string {
+  return new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }

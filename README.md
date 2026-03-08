@@ -85,3 +85,32 @@ Contributions are welcome! Please:
 3. Commit your changes
 4. Open a Pull Request
 
+
+
+## Deployment
+
+The frontend is deployed on Vercel. Set the following environment variables:
+
+```
+NEXT_PUBLIC_CONTRACT_ADDRESS=SP2ZR834WEZJ04EXNT2HMDG3S1WC7AGTB5ZNE5B2C
+NEXT_PUBLIC_CONTRACT_NAME=daily-checkin-v2
+NEXT_PUBLIC_NETWORK=mainnet
+```
+
+
+
+## Security
+
+- Smart contract is open-source and verifiable on-chain
+- All transactions are signed client-side — private keys never leave your wallet
+- No backend server — fully decentralized
+
+
+
+## Roadmap
+
+- [ ] Push notifications for daily reminder
+- [ ] Social sharing of streak milestones
+- [ ] Multi-chain support
+- [ ] DAO governance for reward pool
+

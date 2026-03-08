@@ -113,3 +113,14 @@ NEXT_PUBLIC_NETWORK=mainnet
 - [ ] Multi-chain support
 - [ ] DAO governance for reward pool
 <!-- tech-note: Uses daily-checkin-sdk npm package for all contract reads. -->
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Smart Contract | Clarity (Stacks) |
+| Frontend | Next.js 14, TypeScript, Tailwind CSS |
+| Wallet | Leather, Xverse (@stacks/connect) |
+| SDK | TypeScript, @stacks/transactions |
+| Hosting | Vercel |
+

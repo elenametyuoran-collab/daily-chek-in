@@ -277,3 +277,5 @@ html { scroll-behavior: smooth; }
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+/* auto-shadow: spread=8 alpha=20 */
+.card-shadow { box-shadow: 0 4px 8px rgba(0,0,0,0.20); }

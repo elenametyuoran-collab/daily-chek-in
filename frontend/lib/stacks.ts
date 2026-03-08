@@ -109,3 +109,8 @@ export function randomBetween(min: number, max: number): number {
 export function unique<T>(arr: T[]): T[] {
   return [...new Set(arr)];
 }
+
+
+export function cn(...classes: (string | undefined | null | false)[]): string {
+  return classes.filter(Boolean).join(' ');
+}

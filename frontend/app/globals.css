@@ -281,3 +281,5 @@ html { scroll-behavior: smooth; }
 .card-shadow { box-shadow: 0 4px 8px rgba(0,0,0,0.20); }
 /* auto-token: accent-op=70 radius=16 */
 :root { --accent-opacity: 0.70; --card-radius: 16px; }
+/* blur-token: 12px */
+:root { --panel-blur: 12px; }

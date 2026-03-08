@@ -259,3 +259,27 @@ html { scroll-behavior: smooth; }
   to   { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-up { animation: fade-up 0.4s ease-out both; }
+
+/* ─── Gradient border ─── */
+.gradient-border {
+  position: relative;
+  border-radius: 16px;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+/* auto-shadow: spread=8 alpha=20 */
+.card-shadow { box-shadow: 0 4px 8px rgba(0,0,0,0.20); }
+/* auto-token: accent-op=70 radius=16 */
+:root { --accent-opacity: 0.70; --card-radius: 16px; }
+/* blur-token: 12px */
+:root { --panel-blur: 12px; }

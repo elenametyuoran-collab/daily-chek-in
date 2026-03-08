@@ -62,8 +62,7 @@ You have a 2-day grace period. Missing 2+ days resets your streak to 1.
 Yes — they are standard Stacks NFTs (SIP-009).
 
 **Q: How are STX rewards distributed?**
-The contract owner periodically calls `distribute-rewards` with the top 5 addresses.
-<!-- tech-note: Frontend deployed on Vercel with automatic CI/CD from GitHub. -->
+The contract owner periodically calls `distribute-rewards` with the top 5 addresses.
 
 ## Contract Details
 
@@ -113,4 +112,15 @@ NEXT_PUBLIC_NETWORK=mainnet
 - [ ] Social sharing of streak milestones
 - [ ] Multi-chain support
 - [ ] DAO governance for reward pool
+<!-- tech-note: Uses daily-checkin-sdk npm package for all contract reads. -->
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Smart Contract | Clarity (Stacks) |
+| Frontend | Next.js 14, TypeScript, Tailwind CSS |
+| Wallet | Leather, Xverse (@stacks/connect) |
+| SDK | TypeScript, @stacks/transactions |
+| Hosting | Vercel |
 

@@ -44,6 +44,9 @@ export interface CheckInTxOptions {
  * const stats = await client.getUserStats('SP1XYZ...');
  * console.log(stats.streak); // 7
  */
+/** Current SDK version */
+export const SDK_VERSION = '1.0.3';
+
 export class DailyCheckinClient {
   private contractAddress: string;
   private contractName: string;

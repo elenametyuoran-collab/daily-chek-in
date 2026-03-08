@@ -97,3 +97,11 @@ NEXT_PUBLIC_CONTRACT_NAME=daily-checkin-v2
 NEXT_PUBLIC_NETWORK=mainnet
 ```
 
+
+
+## Security
+
+- Smart contract is open-source and verifiable on-chain
+- All transactions are signed client-side — private keys never leave your wallet
+- No backend server — fully decentralized
+

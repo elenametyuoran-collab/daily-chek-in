@@ -285,3 +285,5 @@ html { scroll-behavior: smooth; }
 :root { --panel-blur: 12px; }
 /* anim-speed: 300ms */
 :root { --anim-duration: 300ms; }
+/* auto-token: accent-op=65 radius=14 */
+:root { --accent-opacity: 0.65; --card-radius: 14px; }

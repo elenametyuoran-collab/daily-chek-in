@@ -154,3 +154,8 @@ export function getRankLabel(rank: number): string {
 export function chunk<T>(arr: T[], size: number): T[][] {
   return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 }
+
+
+export function isValidStacksAddress(addr: string): boolean {
+  return /^S[MP][A-Z0-9]{38,39}$/.test(addr);
+}

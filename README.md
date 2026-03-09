@@ -129,3 +129,23 @@ NEXT_PUBLIC_NETWORK=mainnet
 
 MIT © elenametyuoran1
 <!-- tech-note: Built with Next.js 14 App Router and @stacks/connect. -->
+
+## Deployment
+
+The frontend is deployed on Vercel. Set the following environment variables:
+
+```
+NEXT_PUBLIC_CONTRACT_ADDRESS=SP2ZR834WEZJ04EXNT2HMDG3S1WC7AGTB5ZNE5B2C
+NEXT_PUBLIC_CONTRACT_NAME=daily-checkin-v2
+NEXT_PUBLIC_NETWORK=mainnet
+```
+
+
+
+## Roadmap
+
+- [ ] Push notifications for daily reminder
+- [ ] Social sharing of streak milestones
+- [ ] Multi-chain support
+- [ ] DAO governance for reward pool
+

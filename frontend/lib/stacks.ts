@@ -126,3 +126,13 @@ export function formatDate(date: Date | string): string {
 export function chunk<T>(arr: T[], size: number): T[][] {
   return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 }
+
+
+export function formatSTX(microStx: number): string {
+  return (microStx / 1_000_000).toFixed(2) + ' STX';
+}
+
+
+export function cn(...classes: (string | undefined | null | false)[]): string {
+  return classes.filter(Boolean).join(' ');
+}

@@ -241,3 +241,8 @@ export default DailyCheckinClient;
 
 // re-export for convenience
 export type { NetworkType };
+
+
+export type UserStats = Awaited<ReturnType<DailyCheckinClient['getUserStats']>>;
+export type LeaderboardEntry = Awaited<ReturnType<DailyCheckinClient['getLeaderboardEntry']>>;
+

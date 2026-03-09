@@ -343,3 +343,5 @@ html { scroll-behavior: smooth; }
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.35);
 }
+/* auto-shadow: spread=12 alpha=12 */
+.card-shadow { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }

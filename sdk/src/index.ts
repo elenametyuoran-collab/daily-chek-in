@@ -1,4 +1,4 @@
-// sdk-rev: 2
+// sdk-rev: 3
 import {
   callReadOnlyFunction,
   cvToJSON,
@@ -134,6 +134,10 @@ export class DailyCheckinClient {
    * Get total number of unique users who have ever checked in.
    * @returns {Promise<number>} Total user count
    */
+  /**
+   * Get total number of unique users who have ever checked in.
+   * @returns {Promise<number>} Total user count
+   */
   async getTotalUsers(): Promise<number> {
     const result = await callReadOnlyFunction({
       contractAddress: this.contractAddress,
@@ -237,3 +241,8 @@ export default DailyCheckinClient;
 
 // re-export for convenience
 export type { NetworkType };
+
+
+export type UserStats = Awaited<ReturnType<DailyCheckinClient['getUserStats']>>;
+export type LeaderboardEntry = Awaited<ReturnType<DailyCheckinClient['getLeaderboardEntry']>>;
+

@@ -169,3 +169,8 @@ export function randomBetween(min: number, max: number): number {
 export function isNftEligible(streak: number, claimed: boolean, threshold: number): boolean {
   return streak >= threshold && !claimed;
 }
+
+
+export function formatDate(date: Date | string): string {
+  return new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}

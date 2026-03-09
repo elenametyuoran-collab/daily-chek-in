@@ -48,6 +48,9 @@ export interface CheckInTxOptions {
 /** Current SDK version */
 export const SDK_VERSION = '1.0.3';
 
+/** Current SDK version */
+export const SDK_VERSION = '1.0.5';
+
 export class DailyCheckinClient {
   private contractAddress: string;
   private contractName: string;

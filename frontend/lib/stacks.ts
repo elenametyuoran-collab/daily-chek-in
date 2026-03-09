@@ -141,3 +141,11 @@ export function cn(...classes: (string | undefined | null | false)[]): string {
 export function unique<T>(arr: T[]): T[] {
   return [...new Set(arr)];
 }
+
+
+export function getRankLabel(rank: number): string {
+  if (rank === 1) return '1st 🥇';
+  if (rank === 2) return '2nd 🥈';
+  if (rank === 3) return '3rd 🥉';
+  return `${rank}th`;
+}

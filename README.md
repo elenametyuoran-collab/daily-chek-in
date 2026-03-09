@@ -112,7 +112,6 @@ NEXT_PUBLIC_NETWORK=mainnet
 - [ ] Social sharing of streak milestones
 - [ ] Multi-chain support
 - [ ] DAO governance for reward pool
-<!-- tech-note: Uses daily-checkin-sdk npm package for all contract reads. -->
 
 ## Tech Stack
 
@@ -129,4 +128,4 @@ NEXT_PUBLIC_NETWORK=mainnet
 ## License
 
 MIT © elenametyuoran1
-
+<!-- tech-note: Built with Next.js 14 App Router and @stacks/connect. -->

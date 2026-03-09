@@ -298,3 +298,9 @@ html { scroll-behavior: smooth; }
   100% { transform: scale(1); opacity: 1; }
 }
 .animate-bounce-in { animation: bounce-in 0.5s ease-out; }
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(167, 139, 250, 0.25);
+  color: #3730a3;
+}

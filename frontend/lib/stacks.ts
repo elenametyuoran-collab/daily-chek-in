@@ -131,3 +131,8 @@ export function chunk<T>(arr: T[], size: number): T[][] {
 export function formatSTX(microStx: number): string {
   return (microStx / 1_000_000).toFixed(2) + ' STX';
 }
+
+
+export function cn(...classes: (string | undefined | null | false)[]): string {
+  return classes.filter(Boolean).join(' ');
+}

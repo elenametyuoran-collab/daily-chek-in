@@ -134,6 +134,10 @@ export class DailyCheckinClient {
    * Get total number of unique users who have ever checked in.
    * @returns {Promise<number>} Total user count
    */
+  /**
+   * Get total number of unique users who have ever checked in.
+   * @returns {Promise<number>} Total user count
+   */
   async getTotalUsers(): Promise<number> {
     const result = await callReadOnlyFunction({
       contractAddress: this.contractAddress,

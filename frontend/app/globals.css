@@ -287,3 +287,5 @@ html { scroll-behavior: smooth; }
 :root { --anim-duration: 300ms; }
 /* auto-token: accent-op=65 radius=14 */
 :root { --accent-opacity: 0.65; --card-radius: 14px; }
+/* auto-shadow: spread=12 alpha=18 */
+.card-shadow { box-shadow: 0 4px 12px rgba(0,0,0,0.18); }

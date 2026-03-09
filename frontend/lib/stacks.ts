@@ -164,3 +164,8 @@ export function isValidStacksAddress(addr: string): boolean {
 export function randomBetween(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+export function isNftEligible(streak: number, claimed: boolean, threshold: number): boolean {
+  return streak >= threshold && !claimed;
+}

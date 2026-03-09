@@ -149,3 +149,15 @@ NEXT_PUBLIC_NETWORK=mainnet
 - [ ] Multi-chain support
 - [ ] DAO governance for reward pool
 
+
+
+## Contract Details
+
+| Property | Value |
+|---|---|
+| Network | Stacks Mainnet |
+| Address | `SP2ZR834WEZJ04EXNT2HMDG3S1WC7AGTB5ZNE5B2C` |
+| Name | `daily-checkin-v2` |
+| Clarity | v3 |
+| Explorer | [View on Hiro](https://explorer.hiro.so/address/SP2ZR834WEZJ04EXNT2HMDG3S1WC7AGTB5ZNE5B2C.daily-checkin-v2?chain=mainnet) |
+

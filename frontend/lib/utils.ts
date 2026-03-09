@@ -26,3 +26,7 @@ export function memoize<T>(fn: (key: string) => T): (key: string) => T {
   const cache = new Map<string, T>();
   return (key: string) => { if (!cache.has(key)) cache.set(key, fn(key)); return cache.get(key)!; };
 }
+
+export function pluralize(n: number, word: string, plural = word + 's'): string {
+  return `${n} ${n === 1 ? word : plural}`;
+}

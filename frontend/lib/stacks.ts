@@ -136,3 +136,26 @@ export function formatSTX(microStx: number): string {
 export function cn(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(' ');
 }
+
+
+export function unique<T>(arr: T[]): T[] {
+  return [...new Set(arr)];
+}
+
+
+export function getRankLabel(rank: number): string {
+  if (rank === 1) return '1st 🥇';
+  if (rank === 2) return '2nd 🥈';
+  if (rank === 3) return '3rd 🥉';
+  return `${rank}th`;
+}
+
+
+export function chunk<T>(arr: T[], size: number): T[][] {
+  return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
+}
+
+
+export function isValidStacksAddress(addr: string): boolean {
+  return /^S[MP][A-Z0-9]{38,39}$/.test(addr);
+}

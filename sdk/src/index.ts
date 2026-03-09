@@ -1,4 +1,4 @@
-// sdk-rev: 1
+// sdk-rev: 2
 import {
   callReadOnlyFunction,
   cvToJSON,
@@ -47,6 +47,9 @@ export interface CheckInTxOptions {
  */
 /** Current SDK version */
 export const SDK_VERSION = '1.0.3';
+
+/** Current SDK version */
+export const SDK_VERSION = '1.0.5';
 
 export class DailyCheckinClient {
   private contractAddress: string;
@@ -178,6 +181,7 @@ export class DailyCheckinClient {
   /**
    * Fetch and sort full leaderboard (sorted by total-checkins descending).
    */
+  /** Fetch top N users by streak from the leaderboard map. */
   /** Fetch top N users by streak from the leaderboard map. */
   async getLeaderboard(maxEntries = 50): Promise<LeaderboardEntry[]> {
     const total = await this.getTotalUsers();

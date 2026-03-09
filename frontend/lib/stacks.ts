@@ -159,3 +159,8 @@ export function chunk<T>(arr: T[], size: number): T[][] {
 export function isValidStacksAddress(addr: string): boolean {
   return /^S[MP][A-Z0-9]{38,39}$/.test(addr);
 }
+
+
+export function randomBetween(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

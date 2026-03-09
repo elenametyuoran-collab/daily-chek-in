@@ -136,3 +136,8 @@ export function formatSTX(microStx: number): string {
 export function cn(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(' ');
 }
+
+
+export function unique<T>(arr: T[]): T[] {
+  return [...new Set(arr)];
+}

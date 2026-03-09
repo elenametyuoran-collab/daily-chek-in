@@ -124,3 +124,9 @@ NEXT_PUBLIC_NETWORK=mainnet
 | SDK | TypeScript, @stacks/transactions |
 | Hosting | Vercel |
 
+
+
+## License
+
+MIT © elenametyuoran1
+

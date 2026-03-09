@@ -335,3 +335,11 @@ html { scroll-behavior: smooth; }
   -webkit-text-fill-color: transparent;
   animation: shimmer-text 3s linear infinite;
 }
+
+/* ─── Glass sm ─── */
+.glass-sm {
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.35);
+}

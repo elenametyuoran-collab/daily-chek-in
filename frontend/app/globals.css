@@ -322,3 +322,16 @@ html { scroll-behavior: smooth; }
 .text-glow {
   text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
 }
+
+/* ─── Shimmer text ─── */
+@keyframes shimmer-text {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #a78bfa 0%, #f5f3ff 50%, #a78bfa 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-text 3s linear infinite;
+}

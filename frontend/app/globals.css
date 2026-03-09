@@ -283,3 +283,5 @@ html { scroll-behavior: smooth; }
 :root { --accent-opacity: 0.70; --card-radius: 16px; }
 /* blur-token: 12px */
 :root { --panel-blur: 12px; }
+/* anim-speed: 300ms */
+:root { --anim-duration: 300ms; }

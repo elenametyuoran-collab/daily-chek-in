@@ -11,7 +11,6 @@ const config: Config = {
       screens: { xs: '480px' },
       zIndex: { 60: '60', 70: '70', 80: '80' },
       fontSize: { '2xs': ['0.65rem', '1rem'] },
-      screens: { xs: '480px' },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
@@ -22,7 +21,6 @@ const config: Config = {
           indigo: '#818cf8',
         },
       },
-      opacity: { 15: '0.15', 35: '0.35', 85: '0.85' },
       opacity: { 15: '0.15', 35: '0.35', 85: '0.85' },
       backdropBlur: {
         xs: '2px',

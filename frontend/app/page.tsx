@@ -6,6 +6,7 @@ import CheckInCard from '@/components/CheckInCard';
 import StatsCard from '@/components/StatsCard';
 import Leaderboard from '@/components/Leaderboard';
 import PoweredBy from '@/components/PoweredBy';
+import MoodVote from '@/components/MoodVote';
 
 export default function HomePage() {
   const [refreshKey, setRefreshKey] = useState(0);
@@ -65,6 +66,9 @@ export default function HomePage() {
             <Leaderboard refreshKey={refreshKey} />
           </div>
         </div>
+
+        {/* Mood Polls */}
+        <MoodVote />
 
         {/* Footer */}
         <footer className="text-center mt-14 pb-6 space-y-3">

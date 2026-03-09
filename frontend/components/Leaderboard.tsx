@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { checkinClient } from '@/lib/contracts';
 import { shortenAddress } from '@/lib/stacks';
 import type { LeaderboardEntry } from '@/lib/contracts';
@@ -17,24 +17,25 @@ export default function Leaderboard({ refreshKey }: Props) {
   const [loading, setLoading] = useState(true);
   const [totalUsers, setTotalUsers] = useState(0);
 
+  const load = useCallback(async () => {
+    setLoading(true);
+    try {
+      const [lb, total] = await Promise.all([
+        checkinClient.getLeaderboard(20),
+        checkinClient.getTotalUsers(),
+      ]);
+      setEntries(lb);
+      setTotalUsers(total);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
   useEffect(() => {
-    const load = async () => {
-      setLoading(true);
-      try {
-        const [lb, total] = await Promise.all([
-          checkinClient.getLeaderboard(20),
-          checkinClient.getTotalUsers(),
-        ]);
-        setEntries(lb);
-        setTotalUsers(total);
-      } catch (e) {
-        console.error(e);
-      } finally {
-        setLoading(false);
-      }
-    };
     load();
-  }, [refreshKey]);
+  }, [load, refreshKey]);
 
   return (
     <div className="glass rounded-3xl p-6 shadow-xl">

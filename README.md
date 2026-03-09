@@ -140,3 +140,12 @@ NEXT_PUBLIC_CONTRACT_NAME=daily-checkin-v2
 NEXT_PUBLIC_NETWORK=mainnet
 ```
 
+
+
+## Roadmap
+
+- [ ] Push notifications for daily reminder
+- [ ] Social sharing of streak milestones
+- [ ] Multi-chain support
+- [ ] DAO governance for reward pool
+

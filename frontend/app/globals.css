@@ -413,3 +413,5 @@ html { scroll-behavior: smooth; }
 }
 /* auto-token: accent-op=70 radius=10 */
 :root { --accent-opacity: 0.70; --card-radius: 10px; }
+/* auto-shadow: spread=16 alpha=18 */
+.card-shadow { box-shadow: 0 4px 16px rgba(0,0,0,0.18); }

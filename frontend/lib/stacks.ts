@@ -143,3 +143,8 @@ export function truncateText(text: string, maxLen: number): string {
 export function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);
 }
+
+
+export function formatSTX(microStx: number): string {
+  return (microStx / 1_000_000).toFixed(2) + ' STX';
+}

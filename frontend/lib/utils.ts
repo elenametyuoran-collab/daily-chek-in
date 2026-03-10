@@ -31,3 +31,7 @@ export function debounce<T extends (...args: unknown[]) => void>(fn: T, ms = 300
   let timer: ReturnType<typeof setTimeout>;
   return ((...args: unknown[]) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), ms); }) as T;
 }
+
+export function pluralize(n: number, word: string, plural = word + 's'): string {
+  return `${n} ${n === 1 ? word : plural}`;
+}

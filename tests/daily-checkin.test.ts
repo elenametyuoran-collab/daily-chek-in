@@ -155,5 +155,31 @@ describe("Daily Check-in Tests", () => {
 
     expect(result).toBeErr(Cl.uint(103)); // ERR-NOT-OWNER
   });
+  it("returns the user with the highest total check-ins", () => {
+  // Alice checks in 3 times
+  for (let i = 0; i < 3; i++) {
+    checkIn(alice);
+    simnet.mineEmptyBlocks(144);
+  }
+
+  // Bob checks in 1 time
+  checkIn(bob);
+
+  const { result } = simnet.callReadOnlyFn(
+    "daily-checkin",
+    "get-top-user",
+    [],
+    alice
+  );
+
+  expect(result).toBeOk(
+    Cl.tuple({
+      user: Cl.some(Cl.principal(alice)),
+      "total-checkins": Cl.uint(3),
+    })
+  );
+});
 
 });
+
+

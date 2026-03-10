@@ -430,3 +430,9 @@ html { scroll-behavior: smooth; }
 .card-shadow { box-shadow: 0 4px 8px rgba(0,0,0,0.12); }
 /* auto-token: accent-op=60 radius=10 */
 :root { --accent-opacity: 0.60; --card-radius: 10px; }
+
+/* ─── Smooth scroll ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}

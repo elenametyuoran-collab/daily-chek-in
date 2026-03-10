@@ -112,3 +112,11 @@ export function chunk<T>(arr: T[], size: number): T[][] {
 export function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);
 }
+
+
+// Approximate: Stacks genesis at block 0 around Oct 2018
+export function blockToApproxDate(block: number): string {
+  if (block === 0) return 'Never';
+  const approxMs = Date.now() - (block * 10 * 60 * 1000);
+  return new Date(approxMs).toLocaleDateString();
+}

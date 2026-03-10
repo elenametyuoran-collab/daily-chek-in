@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       zIndex: { 60: '60', 70: '70', 80: '80' },
+      zIndex: { 60: '60', 70: '70', 80: '80' },
       screens: { xs: '480px' },
       zIndex: { 60: '60', 70: '70', 80: '80' },
       fontSize: { '2xs': ['0.65rem', '1rem'] },

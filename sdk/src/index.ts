@@ -51,6 +51,9 @@ export const SDK_VERSION = '1.0.3';
 /** Current SDK version */
 export const SDK_VERSION = '1.0.5';
 
+/** Current SDK version */
+export const SDK_VERSION = '1.0.6';
+
 export class DailyCheckinClient {
   private contractAddress: string;
   private contractName: string;

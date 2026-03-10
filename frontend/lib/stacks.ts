@@ -133,3 +133,13 @@ export function formatNumber(n: number): string {
 export function truncateText(text: string, maxLen: number): string {
   return text.length <= maxLen ? text : text.slice(0, maxLen - 1) + '…';
 }
+
+
+export function truncateText(text: string, maxLen: number): string {
+  return text.length <= maxLen ? text : text.slice(0, maxLen - 1) + '…';
+}
+
+
+export function clamp(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), max);
+}

@@ -24,6 +24,7 @@ const config: Config = {
         },
       },
       opacity: { 15: '0.15', 35: '0.35', 85: '0.85' },
+      opacity: { 15: '0.15', 35: '0.35', 85: '0.85' },
       backdropBlur: {
         xs: '2px',
       },

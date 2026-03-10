@@ -21,3 +21,8 @@ export function safeParseInt(val: unknown, fallback = 0): number {
 export function pluralize(n: number, word: string, plural = word + 's'): string {
   return `${n} ${n === 1 ? word : plural}`;
 }
+
+export function safeParseInt(val: unknown, fallback = 0): number {
+  const n = parseInt(String(val), 10);
+  return isNaN(n) ? fallback : n;
+}

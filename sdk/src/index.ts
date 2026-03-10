@@ -1,4 +1,4 @@
-// sdk-rev: 4
+// sdk-rev: 5
 import {
   callReadOnlyFunction,
   cvToJSON,
@@ -206,6 +206,7 @@ export class DailyCheckinClient {
   // ──────────────────────────────────────────
 
   /** Prepare args for check-in transaction. */
+  /** Prepare contract call options for the check-in transaction. Pass the result to openContractCall. */
   /** Prepare contract call options for the check-in transaction. Pass the result to openContractCall. */
   prepareCheckIn(): CheckInTxOptions {
     return {

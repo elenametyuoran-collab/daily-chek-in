@@ -1,3 +1,4 @@
+// updated: 2026-03-10
 import { StacksMainnet } from '@stacks/network';
 
 export const CONTRACT_ADDRESS =
@@ -126,4 +127,9 @@ export function formatNumber(n: number): string {
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
   if (n >= 1_000) return (n / 1_000).toFixed(1) + 'K';
   return n.toString();
+}
+
+
+export function truncateText(text: string, maxLen: number): string {
+  return text.length <= maxLen ? text : text.slice(0, maxLen - 1) + '…';
 }

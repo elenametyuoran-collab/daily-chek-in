@@ -415,3 +415,18 @@ html { scroll-behavior: smooth; }
 :root { --accent-opacity: 0.70; --card-radius: 10px; }
 /* auto-shadow: spread=16 alpha=18 */
 .card-shadow { box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(139, 92, 246, 0.6);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ─── Neon glow ─── */
+.neon-blue   { box-shadow: 0 0 12px rgba(96,165,250,0.5),  0 0 30px rgba(96,165,250,0.2); }
+.neon-purple { box-shadow: 0 0 12px rgba(167,139,250,0.5), 0 0 30px rgba(167,139,250,0.2); }
+/* auto-shadow: spread=8 alpha=12 */
+.card-shadow { box-shadow: 0 4px 8px rgba(0,0,0,0.12); }
+/* auto-token: accent-op=60 radius=10 */
+:root { --accent-opacity: 0.60; --card-radius: 10px; }

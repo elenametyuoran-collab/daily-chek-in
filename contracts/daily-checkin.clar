@@ -234,6 +234,38 @@
   (ok (var-get user-count))
 )
 
+;; Returns the user with the highest total check-ins
+(define-read-only (get-top-user)
+  (let
+    (
+      (count (var-get user-count))
+      (i u0)
+      (top-user none)
+      (top-checkins u0)
+    )
+    (begin
+      (while (< i count)
+        (let
+          (
+            (user (unwrap-panic (map-get? user-index i)))
+            (stats (unwrap-panic (map-get? user-stats user)))
+            (checkins (get total-checkins stats))
+          )
+          (if (> checkins top-checkins)
+            (begin
+              (set top-checkins checkins)
+              (set top-user (some user))
+            )
+            true
+          )
+        )
+        (set i (+ i u1))
+      )
+      (ok { user: top-user, total-checkins: top-checkins })
+    )
+  )
+)
+
 ;; NFT minting statistics
 (define-read-only (get-nft-counts)
   (ok {

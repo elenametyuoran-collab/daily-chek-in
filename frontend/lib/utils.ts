@@ -35,3 +35,7 @@ export function debounce<T extends (...args: unknown[]) => void>(fn: T, ms = 300
 export function pluralize(n: number, word: string, plural = word + 's'): string {
   return `${n} ${n === 1 ? word : plural}`;
 }
+
+export function objectPick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
+  return keys.reduce((acc, k) => { if (k in obj) acc[k] = obj[k]; return acc; }, {} as Pick<T, K>);
+}

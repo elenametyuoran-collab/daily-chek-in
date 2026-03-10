@@ -411,3 +411,5 @@ html { scroll-behavior: smooth; }
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+/* auto-token: accent-op=70 radius=10 */
+:root { --accent-opacity: 0.70; --card-radius: 10px; }

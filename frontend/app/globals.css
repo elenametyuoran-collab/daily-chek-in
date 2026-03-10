@@ -454,3 +454,5 @@ html { scroll-behavior: smooth; }
 .text-glow {
   text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
 }
+/* auto-shadow: spread=12 alpha=12 */
+.card-shadow { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }

@@ -177,3 +177,13 @@ Yes — they are standard Stacks NFTs (SIP-009).
 **Q: How are STX rewards distributed?**
 The contract owner periodically calls `distribute-rewards` with the top 5 addresses.
 
+
+
+## Contributing
+
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feat/my-feature`)
+3. Commit your changes
+4. Open a Pull Request
+

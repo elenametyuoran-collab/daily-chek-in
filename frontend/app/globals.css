@@ -449,3 +449,8 @@ html { scroll-behavior: smooth; }
   -webkit-text-fill-color: transparent;
   animation: shimmer-text 3s linear infinite;
 }
+
+/* ─── Glow text ─── */
+.text-glow {
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}

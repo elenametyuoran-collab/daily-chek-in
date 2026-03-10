@@ -128,7 +128,6 @@ NEXT_PUBLIC_NETWORK=mainnet
 ## License
 
 MIT © elenametyuoran1
-<!-- tech-note: Built with Next.js 14 App Router and @stacks/connect. -->
 
 ## Deployment
 
@@ -194,4 +193,4 @@ Contributions are welcome! Please:
 - Smart contract is open-source and verifiable on-chain
 - All transactions are signed client-side — private keys never leave your wallet
 - No backend server — fully decentralized
-
+<!-- tech-note: Streak tracking is fully on-chain — no centralized backend. -->

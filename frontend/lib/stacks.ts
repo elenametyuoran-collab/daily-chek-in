@@ -1,3 +1,4 @@
+// updated: 2026-03-10
 import { StacksMainnet } from '@stacks/network';
 
 export const CONTRACT_ADDRESS =

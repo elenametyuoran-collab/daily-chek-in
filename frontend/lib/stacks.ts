@@ -120,3 +120,10 @@ export function blockToApproxDate(block: number): string {
   const approxMs = Date.now() - (block * 10 * 60 * 1000);
   return new Date(approxMs).toLocaleDateString();
 }
+
+
+export function formatNumber(n: number): string {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
+  if (n >= 1_000) return (n / 1_000).toFixed(1) + 'K';
+  return n.toString();
+}

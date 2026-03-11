@@ -194,3 +194,8 @@ export function blockToApproxDate(block: number): string {
   const approxMs = Date.now() - (block * 10 * 60 * 1000);
   return new Date(approxMs).toLocaleDateString();
 }
+
+
+export function isNftEligible(streak: number, claimed: boolean, threshold: number): boolean {
+  return streak >= threshold && !claimed;
+}

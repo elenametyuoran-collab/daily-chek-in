@@ -508,3 +508,5 @@ html { scroll-behavior: smooth; }
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+/* auto-shadow: spread=16 alpha=12 */
+.card-shadow { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }

@@ -166,6 +166,10 @@ export class DailyCheckinClient {
    * Get total counts of minted NFT badges.
    * @returns {Promise<NftCounts>} { streak7Total, streak30Total }
    */
+  /**
+   * Get total counts of minted NFT badges.
+   * @returns {Promise<NftCounts>} { streak7Total, streak30Total }
+   */
   async getNftCounts(): Promise<NftCounts> {
     const result = await callReadOnlyFunction({
       contractAddress: this.contractAddress,
@@ -188,6 +192,7 @@ export class DailyCheckinClient {
   /**
    * Fetch and sort full leaderboard (sorted by total-checkins descending).
    */
+  /** Fetch top N users by streak from the leaderboard map. */
   /** Fetch top N users by streak from the leaderboard map. */
   /** Fetch top N users by streak from the leaderboard map. */
   async getLeaderboard(maxEntries = 50): Promise<LeaderboardEntry[]> {
@@ -245,6 +250,11 @@ export default DailyCheckinClient;
 
 // re-export for convenience
 export type { NetworkType };
+
+
+export type UserStats = Awaited<ReturnType<DailyCheckinClient['getUserStats']>>;
+export type LeaderboardEntry = Awaited<ReturnType<DailyCheckinClient['getLeaderboardEntry']>>;
+
 
 
 export type UserStats = Awaited<ReturnType<DailyCheckinClient['getUserStats']>>;

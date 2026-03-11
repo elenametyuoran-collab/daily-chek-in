@@ -44,3 +44,8 @@ export function debounce<T extends (...args: unknown[]) => void>(fn: T, ms = 300
   let timer: ReturnType<typeof setTimeout>;
   return ((...args: unknown[]) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), ms); }) as T;
 }
+
+export function safeParseInt(val: unknown, fallback = 0): number {
+  const n = parseInt(String(val), 10);
+  return isNaN(n) ? fallback : n;
+}

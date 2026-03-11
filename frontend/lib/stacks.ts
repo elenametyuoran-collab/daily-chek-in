@@ -153,3 +153,28 @@ export function formatSTX(microStx: number): string {
 export function chunk<T>(arr: T[], size: number): T[][] {
   return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 }
+
+
+export function formatDate(date: Date | string): string {
+  return new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+
+export function unique<T>(arr: T[]): T[] {
+  return [...new Set(arr)];
+}
+
+
+export function randomBetween(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+export function isValidStacksAddress(addr: string): boolean {
+  return /^S[MP][A-Z0-9]{38,39}$/.test(addr);
+}
+
+
+export function cn(...classes: (string | undefined | null | false)[]): string {
+  return classes.filter(Boolean).join(' ');
+}

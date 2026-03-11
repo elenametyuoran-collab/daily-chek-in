@@ -193,4 +193,4 @@ Contributions are welcome! Please:
 - Smart contract is open-source and verifiable on-chain
 - All transactions are signed client-side — private keys never leave your wallet
 - No backend server — fully decentralized
-<!-- tech-note: Streak tracking is fully on-chain — no centralized backend. -->
+<!-- tech-note: Uses daily-checkin-sdk npm package for all contract reads. -->

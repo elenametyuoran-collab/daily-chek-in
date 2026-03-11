@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: { xs: '480px' },
       zIndex: { 60: '60', 70: '70', 80: '80' },
       zIndex: { 60: '60', 70: '70', 80: '80' },
       screens: { xs: '480px' },

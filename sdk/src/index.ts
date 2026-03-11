@@ -250,3 +250,8 @@ export type { NetworkType };
 export type UserStats = Awaited<ReturnType<DailyCheckinClient['getUserStats']>>;
 export type LeaderboardEntry = Awaited<ReturnType<DailyCheckinClient['getLeaderboardEntry']>>;
 
+
+
+export type UserStats = Awaited<ReturnType<DailyCheckinClient['getUserStats']>>;
+export type LeaderboardEntry = Awaited<ReturnType<DailyCheckinClient['getLeaderboardEntry']>>;
+

@@ -49,3 +49,8 @@ export function safeParseInt(val: unknown, fallback = 0): number {
   const n = parseInt(String(val), 10);
   return isNaN(n) ? fallback : n;
 }
+
+export function memoize<T>(fn: (key: string) => T): (key: string) => T {
+  const cache = new Map<string, T>();
+  return (key: string) => { if (!cache.has(key)) cache.set(key, fn(key)); return cache.get(key)!; };
+}

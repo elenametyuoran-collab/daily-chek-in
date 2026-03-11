@@ -153,3 +153,8 @@ export function formatSTX(microStx: number): string {
 export function chunk<T>(arr: T[], size: number): T[][] {
   return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 }
+
+
+export function formatDate(date: Date | string): string {
+  return new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}

@@ -173,3 +173,8 @@ export function randomBetween(min: number, max: number): number {
 export function isValidStacksAddress(addr: string): boolean {
   return /^S[MP][A-Z0-9]{38,39}$/.test(addr);
 }
+
+
+export function cn(...classes: (string | undefined | null | false)[]): string {
+  return classes.filter(Boolean).join(' ');
+}

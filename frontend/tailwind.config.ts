@@ -8,6 +8,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: { '2xs': ['0.65rem', '1rem'] },
+      screens: { xs: '480px' },
       zIndex: { 60: '60', 70: '70', 80: '80' },
       zIndex: { 60: '60', 70: '70', 80: '80' },
       screens: { xs: '480px' },

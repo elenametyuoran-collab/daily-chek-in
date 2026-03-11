@@ -1,4 +1,4 @@
-// sdk-rev: 5
+// sdk-rev: 6
 import {
   callReadOnlyFunction,
   cvToJSON,

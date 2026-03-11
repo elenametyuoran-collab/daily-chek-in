@@ -194,6 +194,7 @@ export class DailyCheckinClient {
    */
   /** Fetch top N users by streak from the leaderboard map. */
   /** Fetch top N users by streak from the leaderboard map. */
+  /** Fetch top N users by streak from the leaderboard map. */
   async getLeaderboard(maxEntries = 50): Promise<LeaderboardEntry[]> {
     const total = await this.getTotalUsers();
     const count = Math.min(total, maxEntries);

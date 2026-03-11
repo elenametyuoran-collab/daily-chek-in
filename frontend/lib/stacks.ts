@@ -163,3 +163,8 @@ export function formatDate(date: Date | string): string {
 export function unique<T>(arr: T[]): T[] {
   return [...new Set(arr)];
 }
+
+
+export function randomBetween(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

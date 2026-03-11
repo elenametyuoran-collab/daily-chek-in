@@ -186,3 +186,11 @@ export function getRankLabel(rank: number): string {
   if (rank === 3) return '3rd 🥉';
   return `${rank}th`;
 }
+
+
+// Approximate: Stacks genesis at block 0 around Oct 2018
+export function blockToApproxDate(block: number): string {
+  if (block === 0) return 'Never';
+  const approxMs = Date.now() - (block * 10 * 60 * 1000);
+  return new Date(approxMs).toLocaleDateString();
+}

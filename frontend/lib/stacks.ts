@@ -158,3 +158,8 @@ export function chunk<T>(arr: T[], size: number): T[][] {
 export function formatDate(date: Date | string): string {
   return new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
+
+
+export function unique<T>(arr: T[]): T[] {
+  return [...new Set(arr)];
+}
